@@ -36,6 +36,7 @@ namespace AmdLinkSteamWrapper
                 try
                 {
                     ligne.Kill();
+                    Console.WriteLine($"Info : Killed PID {ligne.Id}]");
                 }
                 catch (Exception e)
                 {
