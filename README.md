@@ -10,5 +10,6 @@ Usefull in order to lauch steam big picture mode into Amd Link.
 1.1) If you wish to build by your self, install .Net Core SDK from https://dotnet.microsoft.com/download.
      Then run dotnet publish -o <output path here> AmdLinkSteamWrapper.csproj 
 1.2) If you want to use prebuild, download then from release section.
-2) Open Amd Radeon software. <next step to be writed>
-3) 
+2) Open Amd Radeon software. 
+3) Add the wrapper into the games section.
+4) Lauch the wrapper in the Amd Link android app.
