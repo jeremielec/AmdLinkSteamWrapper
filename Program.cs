@@ -28,7 +28,7 @@ namespace AmdLinkSteamWrapper
                 Arguments = _file.SteamArg
             };
 
-            List<Process> steamProcess = Process.GetProcesses().Where(_ => { try { return _.MainModule.FileName == _file.SteamPath; } catch { return false; } }).ToList();
+            List<Process> steamProcess = Process.GetProcesses().Where(_ => { try { return Path.GetFileName(_.MainModule.FileName).ToLower() == Path.GetFileName(_file.SteamPath).ToLower(); } catch { return false; } }).ToList();
 
             // Kill old steam process
             foreach (var ligne in steamProcess)
