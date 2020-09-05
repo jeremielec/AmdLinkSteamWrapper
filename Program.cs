@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using Microsoft.Extensions.Configuration;
 
 namespace AmdLinkSteamWrapper
@@ -36,7 +37,8 @@ namespace AmdLinkSteamWrapper
                 try
                 {
                     ligne.Kill();
-                    Console.WriteLine($"Info : Killed PID {ligne.Id}]");
+                    Console.WriteLine($"Info : Killed PID {ligne.Id}");
+                    Thread.Sleep(250);
                 }
                 catch (Exception e)
                 {
